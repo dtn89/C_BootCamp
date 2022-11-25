@@ -47,5 +47,21 @@ int main()
     *uint_ptr = 'C';
     printf("11 | %u, %X, %X, %c\n",x , x, *ptr, *ptr);
 
+    int *ptr_null = NULL;
+    /* Execute only if ptr isn't null */
+    if (ptr_null)    //if(*ptr_null != NULL)
+    {
+        printf("12 | Pointed value: %d\n", *ptr_null);
+    }
+
+    int someValue = 123;
+
+    /* Execute only if ptr is null*/
+    if (!ptr_null)   //if(ptr == NULL)
+    {
+        ptr_null = &someValue;        
+    }
+    printf("13 | Pointed value: %d\n", *ptr_null);
+
     return EXIT_SUCCESS;
 }
