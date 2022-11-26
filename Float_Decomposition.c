@@ -41,7 +41,7 @@ int main()
     printf("Enter an input number: ");
     scanf("%f", &inputNumber);
 
-    FloatDecomposite(inputNumber,p_float_factor,p_int_factor);
+    FloatDecomposite(inputNumber, p_float_factor, p_int_factor);
 
     printf("Float factor = %f\n", float_factor);
     printf("Integer factor = %d\n", int_factor);
