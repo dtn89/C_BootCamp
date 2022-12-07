@@ -34,6 +34,13 @@ int main()
     my_string[sizeof(my_string)-1] = '\0';  //Assign the last value of my_strigng to NULL value '\0'
     printf("After: \"%s\"\n", my_string);
 
+    /* String Compare: strcmp, strncmp */
+    char str_1[] = "abcdaaa";
+    char str_2[] = "abcd";
+
+    printf("strcmp %s, %s: %d\n", str_1, str_2, strcmp(str_1, str_2));
+    printf("strcmp %s, %s: %d\n", str_1, str_2, strncmp(str_1, str_2, strlen(str_2)));
+
     printf("\n\n=== TrungNam Dang ===\n\n");
     return EXIT_SUCCESS;
 }
