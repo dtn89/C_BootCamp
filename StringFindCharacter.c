@@ -88,6 +88,10 @@ int tokenize_string(char str[], const char delimiters[], int tok_max_len, char t
     char *ptok = str;
     for (i = 0; ptok; i++)
     {
+        // On the first call, the function expects a C string as argument for str,
+        // whose first character is used as the starting location to scan for tokens
+        // In subsequent calls the function expects a null pointer and uses the position
+        // right after the end of the last token as the new starting location for scanning
         ptok = strtok(i == 0 ? ptok : NULL, delimiters);
         strncpy(tokens[i], ptok, ptok ? tok_max_len : 0);
     }
