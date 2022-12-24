@@ -73,8 +73,6 @@ int main()
     const uint8_t rx_buffer[] = {0x41, 0x06, 0xCA, 0xFE, 0xCA, 0xFE, 0xCA, 0xFE};
     read_ble_packet((BlePacket *) rx_buffer);
 
-    alloc_guy(3);
-
     printf("\n=== TrungNam Dang===\n");
     return EXIT_SUCCESS;
 }
